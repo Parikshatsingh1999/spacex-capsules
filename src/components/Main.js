@@ -14,7 +14,7 @@ export default function Main() {
             "https://api.spacexdata.com/v3/capsules"
         );
         let data = await response.json();
-        let result = data?.map(item => ({ name: item.details, id: item.capsule_serial, description: item.type, status: item.status, original_launch: item.original_launch, missions: item.missions, resuseCount: item.reuse_count, landings: item.landings }))
+        let result = data?.map(item => ({ name: item.details, id: item.capsule_serial, type: item.type, status: item.status, original_launch: item.original_launch, missions: item.missions, resuseCount: item.reuse_count, landings: item.landings }))
         let availStatus = [...new Set(data?.map(item => item.status))];
         let availLaunch = [...new Set(data?.map(item => item.original_launch))];
         let availType = [...new Set(data?.map(item => item.type))];

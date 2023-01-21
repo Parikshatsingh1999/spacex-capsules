@@ -10,13 +10,13 @@ export default function Grid(props) {
         showOverlay ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto";
     }, [showOverlay])
 
-    const { name, id, description, status, original_launch, missions, resuseCount, landings } = props.gridItem;
+    const { name, id, type, status, original_launch, missions, resuseCount, landings } = props.gridItem;
     return (<>
         <div className='grid-item' onClick={() => setOverlay(true)}>
             <div className='main-item-wrap'>
                 <h4> {id} </h4>
                 <h2> {name} </h2>
-                <p> {description} </p>
+                <p> {type} </p>
             </div>
         </div>
         <div className={`overlay-item ${showOverlay ? 'active' : ''}`}>
@@ -26,7 +26,7 @@ export default function Grid(props) {
                     <img className='capsule-box' src={capsule} alt='capsule' />
                     {(name && name?.length !== 0) && <div className=' item-batch'> <label>Capsule Detail :</label> <h4> {name} </h4> </div>}
                     {(id && id?.length !== 0) && <div className=' item-batch'> <label>Capsule Id :</label> <h4> {id} </h4> </div>}
-                    {(description && description?.length !== 0) && <div className=' item-batch'> <label>Capsule Description :</label>  <h4> {description} </h4> </div>}
+                    {(type && type?.length !== 0) && <div className=' item-batch'> <label>Capsule Description :</label>  <h4> {type} </h4> </div>}
                     {(status && status?.length !== 0) && <div className=' item-batch'> <label>Capsule Status :</label> <h4> {status} </h4> </div>}
                     {(original_launch && original_launch?.length !== 0) && <div className=' item-batch'> <label>Capsule Original Launch Time : </label> <h4> {original_launch} </h4> </div>}
                     {
