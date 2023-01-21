@@ -292,4 +292,17 @@ body {
   .main-body-wrapper .main-grid .grid-item {
     width: 80%;
   }
+
+  .item-batch h4 {
+    font-size: 14px;
+  }
+
+  .mission-des .item-batch label {
+    width: auto;
+  }
+
+  .mission-des h6 {
+    width: 40%;
+    font-size: 14px;
+  }
 }
