@@ -7,9 +7,7 @@ export default function Grid(props) {
     const [showOverlay, setOverlay] = useState(false);
 
     useEffect(() => {
-
         showOverlay ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto";
-
     }, [showOverlay])
 
     const { name, id, description, status, original_launch, missions, resuseCount, landings } = props.gridItem;

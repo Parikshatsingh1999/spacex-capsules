@@ -4,7 +4,7 @@ import Grid from './Grid';
 
 export default function Main() {
 
-    let [allItems, setAllItems] = useState([]);
+    const [allItems, setAllItems] = useState([]);
     const [gridItems, setGridItems] = useState([]);
     const [gridFilters, setFilters] = useState({ status: null, original_launch: null, type: null });
     const [filtersSelected, setSelectedFilters] = useState({ status: null, original_launch: null, type: null });

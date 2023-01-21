@@ -11,13 +11,10 @@ export default function Filters(props) {
 
   return (
     <div>
-
       {Object.values(filters)?.some(item => item !== null) &&
         (
           <div className='filters-wrap'>
-            <h3>
-              Filters
-            </h3>
+            <h3>  Filters </h3>
             <div className='fliters-grid'>
               <div className='filter-wrap'>
                 {
@@ -40,12 +37,10 @@ export default function Filters(props) {
                   )
                 }
               </div>
-
             </div>
           </div>
         )
       }
-
     </div>
   )
-}
+};
